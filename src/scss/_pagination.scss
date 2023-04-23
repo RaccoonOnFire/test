@@ -1,0 +1,59 @@
+@use "./colors" as color;
+.pagination {
+  max-width: 300px;
+  display: flex;
+  &__btn {
+    background-color: transparent;
+    border: 1px solid color.$light-gray2;
+    padding: 6px 16px;
+    margin-left: 6px;
+    margin-right: 6px;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  &__btn:hover {
+    background-color: color.$light-orange;
+    border: color.$light-orange 1px solid;
+    color:color.$white;
+  }
+  &__btn:active {
+    background-color: color.$orange;
+  }
+  &__numbers {
+    display: flex;
+    gap: 12px;
+  }
+  &__number {
+    font-family: Seatbcn;
+    background-color: transparent;
+    border: 1px solid color.$light-gray2;
+    padding: 6px 16px;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 28px;
+    color: color.$black;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+  }
+  &__number:active {
+    background-color: color.$orange;
+  }
+  &__number--active {
+    background-color: color.$orange;
+    border: 1px solid color.$orange;
+    color: color.$white;
+  }
+  &__number:hover {
+    background-color: color.$light-orange;
+    border: color.$light-orange 1px solid;
+    color:color.$white;
+  }
+  &__icon {
+    pointer-events: none;
+  }
+}
+.hidden {
+  display: none;
+}

@@ -1,0 +1,115 @@
+@use "./colors" as color;
+
+.filter {
+  margin-top: 109px;
+  background-color: color.$white;
+  padding: 24px;
+  &__categories {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  &__submit {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+  }
+}
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  display: none; //TO DO ----------------------------------------------------
+  &__label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    color: color.$gray;
+    padding-bottom: 8px;
+  }
+  &__option {
+    padding: 16px 16px;
+    width: 245px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 30px;
+    color: color.$black;
+    border: 1px solid color.$light-gray2;
+  }
+}
+@media only screen and (max-width: 1125px) {
+  .filter-item {
+    &__option {
+      max-width: 190px;
+    }
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .filter {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .filter {
+    &__categories {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .filter-item {
+    &__option {
+      max-width: 150px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .filter {
+    &__categories {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-bottom: 16px;
+    }
+    &__submit {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 475px) {
+  .filter-item {
+    &__option {
+      max-width: 245px;
+    }
+  }
+}
+@media only screen and (max-width: 319px) {
+  .filter {
+    margin-top: 16px;
+    padding: 12px;
+  }
+  .filter-item {
+    &__option {
+      max-width: 200px;
+    }
+  }
+}
+.asd {
+  padding: 20px;
+}
+//------------------------------test
+.filter {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__category {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    color: color.$light-gray3;
+    padding-bottom: 8px;
+  }
+}

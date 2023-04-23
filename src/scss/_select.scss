@@ -1,0 +1,44 @@
+@use "./colors" as color;
+.select {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 16px;
+    cursor: pointer;
+    &__title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 28px;
+        color: color.$light-gray3;
+        cursor: default;
+    }
+    &__current {
+        padding: 16px 16px;
+        width: 245px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 30px;
+        color: color.$black;
+        border: 1px solid color.$light-gray2;
+    }
+    &__menu {
+        bottom: -250px;
+        position: absolute;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        width: 100%;
+        border: 1px solid color.$light-gray2;
+        overflow-y: scroll;
+    }
+    &__menu-item {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 26px;
+        margin: 11px 18px;
+    }
+    &__menu-item:first-child  {
+        border-bottom: 1px solid color.$light-gray2;
+    }
+}

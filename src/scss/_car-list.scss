@@ -1,0 +1,206 @@
+@use "./colors" as color;
+
+.car-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 52px;
+  margin-bottom: 52px;
+  padding-left: 16px;
+  padding-right: 16px;
+  &__heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1435px;
+    width: 100%;
+    margin-bottom: 52px;
+  }
+  &__heading {
+    font-weight: 750;
+    font-size: 30px;
+    line-height: 48px;
+    color: color.$black;
+  }
+  &__count {
+    color: color.$orange;
+  }
+  &__label {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 28px;
+    color: color.$gray;
+    padding-right: 24px;
+  }
+  &__sorting {
+    padding: 16px 16px;
+    width: 245px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 30px;
+    color: color.$black;
+    border: 1px solid color.$light-gray2;
+  }
+}
+.car {
+  display: flex;
+  margin-bottom: 24px;
+  border: 1px solid color.$light-gray2;
+  &__details {
+    max-width: 905px;
+    width: 100%;
+    padding: 24px;
+  }
+  &__title {
+    font-weight: 750;
+    font-size: 22px;
+    line-height: 117%;
+    color: color.$black;
+    padding-bottom: 12px;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: color.$light-gray3;
+  }
+  &__status {
+    background-color: color.$black;
+    color: color.$white;
+    padding: 5px 8px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &__status--used {
+    background-color: color.$light-gray2;
+    color: color.$black;
+  }
+  &__location {
+    display: flex;
+    gap: 12px;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__price-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    color: color.$black;
+  }
+  &__price-amount {
+    font-weight: 750;
+    font-size: 30px;
+    line-height: 40px;
+    color: color.$orange;
+  }
+  &--invisible {
+    display: none;
+  }
+}
+.car-specification {
+  padding-bottom: 41px;
+  display: flex;
+  gap: 16px;
+  &__item {
+    width: 168px;
+  }
+  &__title {
+    padding-bottom: 8px;
+    color: color.$light-gray3;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__data {
+    font-weight: 750;
+    font-size: 18px;
+    line-height: 24px;
+    color: color.$black;
+  }
+}
+@media only screen and (max-width: 1460px) {
+  .car {
+    &__image {
+      width: 370px;
+      height: 220px;
+    }
+  }
+  .car-specification {
+    &__item {
+      max-width: 168px;
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 880px) {
+  .car {
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    &__image {
+      padding-top: 16px;
+      max-width: 600px;
+      height: 100%;
+    }
+    &__details {
+      max-width: 95%;
+    }
+    &__bottom {
+      border-top: 1px solid color.$light-gray2;
+      padding-top: 12px;
+    }
+    &__bottom a {
+      display: none;
+    }
+    &__status {
+      position:absolute;
+      top:16px;
+      left:16px;
+      font-weight: 500;
+    }
+  }
+  .car-specification {
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    &__item {
+      max-width: 50px;
+    }
+    &__title {
+      display: none;
+    }
+    &__data {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 140%;
+      color: color.$light-gray3;
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  .car-list {
+    &__heading-container {
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 24px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  .car {
+    &__title{
+      font-size: 18px;
+    }
+    &__image{
+      max-width: 250px;
+    }
+  }}

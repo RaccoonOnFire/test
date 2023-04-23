@@ -1,0 +1,62 @@
+@use "./colors" as color;
+.custom-select {
+  position: relative;
+  font-family: Seatbcn;
+
+  font-weight: 700;
+  border: 2px solid color.$light-gray2;
+  min-width: 279px;
+  font-size: 14px;
+  padding: 9px 6px 9px 0px;
+}
+.custom-select select {
+  display: none;
+}
+.select-selected {
+  background-color: white;
+  width: 245px;
+}
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: black transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000000 transparent;
+  top: 7px;
+}
+.select-items div,
+.select-selected {
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+}
+.select-items {
+  border: 2px solid color.$light-gray2;
+  padding: 16px;
+  margin-top: 20px;
+  position: absolute;
+  background-color: color.$white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+}
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  color: color.$orange;
+}

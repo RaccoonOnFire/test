@@ -1,0 +1,132 @@
+@use "./colors" as color;
+
+.header {
+  padding-top: 105px;
+  background-color: color.$kv-green;
+  position: relative;
+  height: 100%;
+  padding-bottom: 60px;
+  &__container {
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 40;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1435px;
+    width: 100%;
+  }
+  &__heading {
+    padding-top: 113px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+    color: color.$white;
+    overflow-y: hidden;
+  }
+  &__subheading {
+    padding-top: 24px;
+    font-weight: 750;
+    font-size: 32px;
+    line-height: 42px;
+    color: color.$white;
+  }
+  &__subheading-feature {
+    font-weight: 300;
+  }
+  &__img {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+}
+@media only screen and (max-width: 1190px) {
+  .header {
+    &__heading {
+      padding-top: 50px;
+    }
+  }
+}
+@media only screen and (max-width: 880px) {
+  .header {
+    margin-top: 85px;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 42px;
+    justify-content: center;
+    align-items: center;
+    &__content {
+      max-width: 1000px;
+    }
+    &__img {
+      order: 1;
+      position: static;
+      max-width: 80%;
+      margin-right: -150px;
+    }
+    &__heading {
+      padding-top: 32px;
+      font-size: 48px;
+    }
+    &__container {
+      order: 2;
+    }
+  }
+}
+@media only screen and (max-width: 880px) {
+  .header {
+    &__heading {
+      padding-top: 32px;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    &__subheading {
+      font-size: 28px;
+    }
+    &__img {
+      max-width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 880px) {
+  .header {
+    &__heading {
+      font-size: 24px;
+    }
+    &__subheading {
+      font-size: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 880px) {
+  .header {
+    &__img {
+      margin-right: -50px;
+    }
+  }
+}
+@media only screen and (max-width: 880px) {
+  .header {
+    margin-top: 75px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header {
+    margin-top: 0px;
+    padding-top: 85px;
+  }
+}

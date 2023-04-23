@@ -1,0 +1,147 @@
+@use "./colors" as color;
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: color.$cream-white;
+  padding: 88px 16px;
+  text-align: center;
+  // max-width: 950px;
+  // width: 100%;
+  color: color.$black;
+  &__subheading {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    padding-bottom: 16px;
+  }
+  &__heading {
+    font-weight: 750;
+    font-size: 48px;
+    line-height: 109%;
+    padding-bottom: 24px;
+  }
+  &__text {
+    max-width: 710px;
+    letter-spacing: 0.112px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    padding-bottom: 64px;
+  }
+  &__accept {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 32px;
+  }
+}
+.contact-form {
+  max-width: 1000px;
+  &__upper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  &__error{
+  }
+
+  &__input {
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    border: 1px solid color.$light-gray2;
+    letter-spacing: 0.112px;
+    font-family: Seatbcn;
+  }
+  &__input--small {
+    max-width: 448px;
+    padding: 12px 20px;
+  }
+  &__bottom {
+    padding-top: 16px;
+  }
+  &__input--big {
+    padding: 20px 14px;
+    height: 184px;
+  }
+}
+.contact-consent {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  padding-top: 32px;
+  gap: 16px;
+  &__checkbox-container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+  }
+  &__checkbox {
+    display: flex;
+    gap: 5px;
+    padding-bottom: 16px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #242529;
+  }
+  &__input {
+    padding-left: 12px;
+    opacity: 1;
+    display: block;
+    cursor: pointer;
+  }
+  &__label {
+    margin-left: 10px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+  }
+  &__small-section {
+    display: flex;
+    margin-left: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__info {
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.6px;
+  }
+  &__link {
+    text-decoration: underline;
+  }
+}
+@media only screen and (max-width: 1028px) {
+  .contact{
+    &__accept{
+      max-width: 600px;
+    }
+  }
+  .contact-form {
+    max-width: 600px;
+    &__input--small {
+      max-width: 250px;
+    }
+  }
+  .contact-consent {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 1028px) {
+  .contact-form {
+    &__input--small {
+      max-width: 100%;
+    }
+  }
+}
